@@ -1,0 +1,87 @@
+.content-right-wrapper {
+    .home-content-wrapper {
+        .role-text {
+            font-size: 110px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .sub-text {
+            color: rgb(111, 118, 126, 0.2);
+            
+
+        }
+
+        .role-desc-text {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 140%;
+            max-width: 740px;
+            color: #6F767E;
+        }
+
+        .count-wrapper {
+            display: flex;
+            gap: 125px;
+            margin-top: 60px;
+
+            .count {
+                color: #fff;
+                font-size: 70px;
+                font-weight: 700;
+                line-height: 120%;
+                letter-spacing: -0.01em;
+                margin: 0;
+            }
+
+            .count-desc {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 125%;
+                color: #6F767E;
+                margin: 0;
+                max-width: 185px;
+                text-transform: uppercase;
+            }
+        }
+
+        .feature-highlight {
+
+            margin-top: 60px;
+            // background-image: url('../../assets/png/hero-illustrations.png');
+            // background-size: cover;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // border-radius: 15px;
+            // overflow: hidden;
+
+
+            .highlight-contents {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 25px;
+                // backdrop-filter: blur(4px) saturate(200%);
+                // -webkit-backdrop-filter: blur(4px) saturate(200%);
+                // background-color: rgba(26, 29, 31, 0.54);
+                // border-radius: 12px;
+                // border: 1px solid rgba(255, 255, 255, 0.125);
+                // padding: 20px;
+            }
+
+            .feature {
+                max-width: 200px;
+
+                .feature-title {
+                    color: #fff;
+                    margin: 0;
+                }
+
+                .feature-decs {
+                    color: #6F767E;
+                    margin: 0;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}

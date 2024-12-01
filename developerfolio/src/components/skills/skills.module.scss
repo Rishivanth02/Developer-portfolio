@@ -1,0 +1,49 @@
+.skills-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .Do {
+        max-width: 530px;
+    }
+
+    .skills-content-heading {
+        font-size: 110px;
+        color: #fff;
+        margin: 0;
+    }
+
+    .sub-text {
+        color: rgb(111, 118, 126, 0.2);
+    }
+
+    .skills-desc-text {
+        display: flex;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 140%;
+        max-width: 740px;
+        color: #6F767E;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .skills-desc-wrapper{
+        line-height: 140%;
+    }
+
+    .skills-bullets-points {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+      
+        .skills-desc-bullet img {
+          width: 24px; 
+          height: 24px; 
+          object-fit: contain;
+          flex-shrink: 0;
+        }
+      }
+      
+      
+    }

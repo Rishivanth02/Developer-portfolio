@@ -1,0 +1,77 @@
+.name-card-wrapper {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    max-width: 344px;
+    min-width: 344px;
+    width: 100%;
+    border-radius: 16px;
+    background-color: #ffff;
+    padding: 30px 20px;
+    height: auto;
+
+
+    .card-image {
+        img {
+            // max-height: 240px;
+            max-width: 244px;
+            border-radius: 12px;
+        }
+    }
+
+    .card-dev-name {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .card-decs {
+        font-size: 18px;
+        font-weight: 500;
+        max-width: 300px;
+        text-align: center;
+        color: #6A6B6E;
+        // margin-top: 70px;
+    }
+
+    .media-icons-wrapper {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .name-card {
+        position: relative;
+
+        .doodle-one {
+            position: absolute;
+            bottom: 14%;
+            right: -67px;
+
+            img {
+                max-width: 125px;
+            }
+        }
+
+        .doodle-two{
+            position: absolute;
+            top: -4%;
+            right: -32px;
+
+            img {
+                max-width: 125px;
+            }
+        }
+
+        .doodle-three{
+            position: absolute;
+            top: 17%;
+            left: -48px;
+
+            img {
+                max-width: 125px;
+            }
+        }
+    }
+}

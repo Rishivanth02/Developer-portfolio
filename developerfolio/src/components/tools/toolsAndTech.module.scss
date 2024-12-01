@@ -1,0 +1,135 @@
+.tools-content-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 120px 0;
+
+    .Do {
+        max-width: 530px;
+    }
+
+    .skills-content-heading {
+        font-size: 110px;
+        color: #fff;
+        margin: 0;
+    }
+
+    .sub-text {
+        color: rgb(111, 118, 126, 0.2);
+    }
+
+    .skills-desc-text {
+        display: flex;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 140%;
+        max-width: 740px;
+        color: #6F767E;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .tech-stack-wrapper {
+        display: flex;
+        
+        gap: 25px;
+        justify-content: space-around;
+        align-items: baseline;
+        margin-bottom: 30px;
+
+        .tech-icons-wrapper {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+  
+
+            &:hover {
+                .tech-stack-name {
+                    color: #eae5f6;
+                }
+
+                .tech-stack-icons {
+                    svg {
+                        path {
+                            fill: #CA6035;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tech-stack-icons {
+            svg {
+                max-width: 48px;
+                min-width: 48px;
+
+                path {
+                    transition: all .3s ease;
+                }
+            }
+        }
+
+        .sass-icons {
+            svg {
+                max-width: 75px;
+                min-width: 75px;
+
+            }
+
+        }
+
+        .js-icons {
+            svg {
+                max-width: 55px;
+                min-width: 55px;
+
+            }
+        }
+
+        .react-icons {
+            svg {
+                max-width: 65px;
+                min-width: 65px;
+
+            }
+        }
+
+        .npm-icons {
+            svg {
+                max-width: 65px;
+                min-width: 65px;
+
+            }
+        }
+
+
+        .tech-stack-name {
+            font-size: 10px;
+            color: #6F767E;
+            margin: 0;
+            transition: all .3s ease;
+
+        }
+
+        transition: all .3s ease;
+
+    }
+
+    .skills-bullets-points {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+      
+        .skills-desc-bullet img {
+          width: 24px; 
+          height: 24px; 
+          object-fit: contain;
+          flex-shrink: 0;
+        }
+      }
+      
+      
+    
+}
