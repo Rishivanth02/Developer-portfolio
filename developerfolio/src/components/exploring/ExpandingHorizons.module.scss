@@ -1,0 +1,29 @@
+.horizons-content-wrapper {
+    // display: flex;
+    // justify-content: space-evenly;
+    // align-items: center;
+    // padding: 120px 0;
+
+    .horizons-contents {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .Do {
+        max-width: 530px;
+    }
+
+    .skills-bullets-points {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+
+        .skills-desc-bullet img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+    }
+}

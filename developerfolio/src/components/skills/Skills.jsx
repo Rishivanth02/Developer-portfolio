@@ -10,8 +10,8 @@ function Skills() {
       <section className={`${style["skills-wrapper"]}`}>
         <div  className={`${style["skills-content"]}`}>
         <h2 className={`${style["skills-content-heading"]}`}>
-        What 
-            <span className={`${style["sub-text"]}`}> I do</span>
+        What I
+            <span className={`${style["sub-text"]}`}>  do</span>
           </h2>
           <div className={`${style["skills-desc-wrapper"]}`}>
            <p className={`${style["skills-desc-text"]}`}>
