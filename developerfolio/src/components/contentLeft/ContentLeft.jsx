@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import style from "../contentLeft/contentLeft.module.scss";
 import DevImage from "../../assets/png/developer-img.png";
 import MailIcon from "../../assets/svg/mail.svg";
@@ -8,6 +9,40 @@ import Doodle02 from "../../assets/svg/doodle02.svg"
 import Doodle03 from "../../assets/svg/doodle04.svg"
 
 function ContentLeft() {
+  const doodleOneRef = useRef(null);
+  const doodleTwoRef = useRef(null);
+  const doodleThreeRef = useRef(null);
+
+  useEffect(() => {
+    // Floating animation for doodle-one
+    gsap.to(doodleOneRef.current, {
+      y: () => gsap.utils.random(-20, 20),
+      duration: 2.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+
+    // Floating animation for doodle-two
+    gsap.to(doodleTwoRef.current, {
+      x: () => gsap.utils.random(-15, 15),
+      y: () => gsap.utils.random(-15, 15),
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+
+    // Floating animation for doodle-three
+    gsap.to(doodleThreeRef.current, {
+      y: () => gsap.utils.random(-25, 25),
+      x: () => gsap.utils.random(-10, 10),
+      duration: 4,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  }, []);
   return (
     <>
       <section className={`${style["name-card-wrapper"]}`}>
@@ -17,13 +52,14 @@ function ContentLeft() {
           </span>
 
           <h2 className={`${style["card-dev-name"]}`}>RISHIVANTH</h2>
-          <span className={`${style["doodle-one"]}`}>
+         {/* Doodles */}
+         <span ref={doodleOneRef} className={`${style["doodle-one"]}`}>
             <img src={Doodle01} alt="" />
           </span>
-          <span className={`${style["doodle-two"]}`}>
+          <span ref={doodleTwoRef} className={`${style["doodle-two"]}`}>
             <img src={Doodle02} alt="" />
           </span>
-          <span className={`${style["doodle-three"]}`}>
+          <span ref={doodleThreeRef} className={`${style["doodle-three"]}`}>
             <img src={Doodle03} alt="" />
           </span>
         <div className={`${style["card-decs-wrapper"]}`}>

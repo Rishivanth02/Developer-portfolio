@@ -1,11 +1,27 @@
+@import "../../responsive";
+@import "../../App.scss";
+
 .beyond-content-wrapper {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 120px 0;
 
+    @include mq(tablet){
+        flex-direction: column-reverse;
+        padding: 60px 0;
+    }
+
     .Do {
         max-width: 530px;
+
+        @include mq(desktop-wide-xs){
+            max-width: 430px;
+        }
+
+        @include mq(phone-xs){
+            max-width: 330px;
+        }
     }
 
 
@@ -19,6 +35,16 @@
             height: 24px;
             object-fit: contain;
             flex-shrink: 0;
+
+            @include mq(phone-sm){
+                width: 20px; 
+                height: 20px; 
+              }
+    
+              @include mq(phone-xs){
+                width: 15px; 
+                height: 15px; 
+              }
         }
     }
 }

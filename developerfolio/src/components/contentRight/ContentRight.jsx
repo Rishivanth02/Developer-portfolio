@@ -6,7 +6,7 @@ function ContentRight() {
     <>
       <section className={`${style["content-right-wrapper"]}`}>
         <div className={`${style["home-content-wrapper"]}`}>
-          <h2 className={`${style["role-text"]}`}>
+          <h2 className={`${style["role-text"]} section-title`}>
             UI
             <span className={`${style["sub-text"]}`}> DEVELOPER</span>
           </h2>

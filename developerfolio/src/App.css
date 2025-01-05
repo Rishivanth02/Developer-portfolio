@@ -43,18 +43,19 @@
 
 /* comman css typography*/
 
-.skills-content-heading {
+/* .skills-content-heading {
   font-size: 110px;
   color: #fff;
   margin: 0;
-}
+} */
 
-.sub-text {
+/* .sub-text {
   color: rgb(111, 118, 126, 0.5);
-}
+} */
 
 
-.skills-desc-text {
+
+/* .skills-desc-text {
   display: flex;
   font-size: 18px;
   font-weight: 400;
@@ -63,19 +64,9 @@
   color: #6F767E;
   margin: 0;
   margin-bottom: 20px;
-}
-.skills-desc-text {
-  display: flex;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 140%;
-  max-width: 740px;
-  color: #6F767E;
-  margin: 0;
-  margin-bottom: 20px;
-}
+} */
 
-.sub-topic{
+/* .sub-topic{
   font-size: 18px;
   font-weight: 400;
   line-height: 140%;
@@ -83,7 +74,7 @@
   color: #ffff;
   margin: 0;
   margin-bottom: 20px;
-}
+} */
       
 /* footer */
 .footer-form {
@@ -135,4 +126,53 @@
 
 .footer-form button:hover {
   background-color: #f46c38;
+}
+
+.download-cv-wrapper{
+  display: flex;
+  gap: 10px;
+}
+
+.download-cv {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #CA6035; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.download-icon{
+  img {
+    max-width: 15px;
+    min-width: 15px;
+}
+}
+
+.download-cv:hover {
+  background-color: #CA6035; 
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 991px) {
+  .download-cv {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .download-icon{
+    img {
+      max-width: 12px;
+      min-width: 12px;
+  }
+  }
 }

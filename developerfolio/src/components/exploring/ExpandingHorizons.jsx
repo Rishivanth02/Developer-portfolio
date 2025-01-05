@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import style from "../exploring/ExpandingHorizons.module.scss";
 import Bolt from "../../assets/svg/bolt-solid.svg";
 import Image from "../../assets/svg/doodle06.svg";
 
 function ExpandingHorizons() {
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    gsap.to(imageRef.current, {
+      y: () => gsap.utils.random(-30, 30),
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  }, []);
+
   return (
     <section className={`${style["horizons-content-wrapper"]}`}>
       <div>
@@ -20,7 +33,7 @@ function ExpandingHorizons() {
       <section className={`${style["horizons-contents"]}`}>
         <div className={`${style["tools-content"]}`}>
           <div className={`${style["content-topic-header"]}`}>
-            <p className={`${style["content-topic-header"]} sub-topic`}>
+            <p className={`${style["content-topic-header"]} ${style["sub-topic"]} sub-topic`}>
               GSAP Scroll Animations
             </p>
             <div className={`${style["skills-bullets-points"]}`}>
@@ -45,7 +58,7 @@ function ExpandingHorizons() {
           </div>
 
           <div className={`${style["content-topic-header"]}`}>
-            <p className={`${style["content-topic-header"]} sub-topic`}>
+            <p className={`${style["content-topic-header"]}  ${style["sub-topic"]} sub-topic`}>
               Strapi (Headless CMS)
             </p>
             <div className={`${style["skills-bullets-points"]}`}>
@@ -70,7 +83,7 @@ function ExpandingHorizons() {
           </div>
 
           <div className={`${style["content-topic-header"]}`}>
-            <p className={`${style["content-topic-header"]} sub-topic`}>
+            <p className={`${style["content-topic-header"]}  ${style["sub-topic"]} sub-topic`}>
               Eagerness to Learn New Stacks
             </p>
             <div className={`${style["skills-bullets-points"]}`}>
@@ -95,7 +108,7 @@ function ExpandingHorizons() {
           </div>
 
           <div className={`${style["content-topic-header"]}`}>
-            <p className={`${style["content-topic-header"]} sub-topic`}>
+            <p className={`${style["content-topic-header"]}  ${style["sub-topic"]} sub-topic`}>
               Quick Learner
             </p>
             <div className={`${style["skills-bullets-points"]}`}>
@@ -120,7 +133,7 @@ function ExpandingHorizons() {
           </div>
         </div>
         <span>
-          <img className={`${style["Do"]}`} src={Image} alt="" />
+          <img ref={imageRef} className={`${style["Do"]}`} src={Image} alt="" />
         </span>
       </section>
     </section>

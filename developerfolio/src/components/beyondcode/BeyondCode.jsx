@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import style from "../beyondcode/beyondCode.module.scss";
 import Bolt from "../../assets/svg/bolt-solid.svg";
 import Image from "../../assets/svg/doodle08.svg";
 
 function BeyondCode() {
+
+  const rocketRef = useRef(null);
+
+  useEffect(() => {
+    // Rocket floating animation
+    gsap.to(rocketRef.current, {
+      y: () => gsap.utils.random(-20, 20), // Vertical oscillation
+      x: () => gsap.utils.random(-10, 10), // Horizontal sway
+      rotation: () => gsap.utils.random(-5, 5), // Slight rotation for a floating effect
+      duration: 2, // Duration of the animation
+      repeat: -1, // Infinite looping
+      yoyo: true, // Reverse direction at the end
+      ease: "sine.inOut", // Smooth easing for realistic motion
+    });
+  }, []);
+
+
   return (
     <section className={`${style["beyond-content-wrapper"]}`}>
              <span>
-          <img className={`${style["Do"]}`} src={Image} alt="" />
+          <img  ref={rocketRef} className={`${style["Do"]}`} src={Image} alt="" />
         </span>
       <div className={`${style["tools-content"]}`}>
         <h2

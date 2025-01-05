@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import style from "../tools/toolsAndTech.module.scss";
 import Image from "../../assets/svg/doodle01.svg";
 import Bolt from "../../assets/svg/bolt-solid.svg";
 
 function ToolsAndTech() {
+
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    // Floating animation for the image
+    gsap.to(imageRef.current, {
+      y: () => gsap.utils.random(-30, 30),
+      x: () => gsap.utils.random(-20, 20),
+      duration: 2.5,
+      repeat: -2,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  }, []);
+
   return (
     <>
       <section className={`${style["tools-content-wrapper"]}`}>
         <span>
-          <img className={`${style["Do"]}`} src={Image} alt="" />
+          <img ref={imageRef} className={`${style["Do"]}`} src={Image} alt="" />
         </span>
         <div className={`${style["tools-content"]}`}>
           <h2 className={`${style["skills-content-heading"]}`}>

@@ -73,16 +73,10 @@ button:focus-visible {
   padding: 0 30px;
   margin: 0 auto;
 
-  /* @include mq(desktop-wide) {
-    max-width: 1248px;
-  }
+}
 
-  @include mq(desktop) {
-    max-width: 1200px;
-  }
-
-  @include mq(phone) {
+@media (max-width: 767px) {
+  .container {
     padding: 0 15px;
-  } */
-
+  }
 }
