@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import style from "../contentLeft/contentLeft.module.scss";
-import DevImage from "../../assets/png/developer-img.png";
+import DevImage from "../../assets/png/image01.png";
 import MailIcon from "../../assets/svg/mail.svg";
-import LinkedIn from "../../assets/svg/linkedin.svg"
-import Doodle01 from "../../assets/svg/doodle05.svg"
-import Doodle02 from "../../assets/svg/doodle02.svg"
-import Doodle03 from "../../assets/svg/doodle04.svg"
+import LinkedIn from "../../assets/svg/linkedin.svg";
+import Doodle01 from "../../assets/svg/doodle05.svg";
+import Doodle02 from "../../assets/svg/doodle02.svg";
+import Doodle03 from "../../assets/svg/doodle04.svg";
 
 function ContentLeft() {
   const doodleOneRef = useRef(null);
@@ -52,8 +52,8 @@ function ContentLeft() {
           </span>
 
           <h2 className={`${style["card-dev-name"]}`}>RISHIVANTH</h2>
-         {/* Doodles */}
-         <span ref={doodleOneRef} className={`${style["doodle-one"]}`}>
+          {/* Doodles */}
+          <span ref={doodleOneRef} className={`${style["doodle-one"]}`}>
             <img src={Doodle01} alt="" />
           </span>
           <span ref={doodleTwoRef} className={`${style["doodle-two"]}`}>
@@ -62,23 +62,25 @@ function ContentLeft() {
           <span ref={doodleThreeRef} className={`${style["doodle-three"]}`}>
             <img src={Doodle03} alt="" />
           </span>
-        <div className={`${style["card-decs-wrapper"]}`}>
-          <h5 className={`${style["card-decs"]}`}>    
-          A UI Developer crafting seamless and responsive user interfaces to
-          enhance user experiences
-            </h5>  
-        </div>
+          <div className={`${style["card-decs-wrapper"]}`}>
+            <h5 className={`${style["card-decs"]}`}>
+              A UI Developer crafting seamless and responsive user interfaces to
+              enhance user experiences
+            </h5>
+          </div>
 
-        <div className={`${style["media-icons-wrapper"]}`}>
-        <span>
-            <img src={LinkedIn} alt="LinkedIn" />
-        </span>
-        <span>
-            <img src={MailIcon} alt="mail" />
-        </span>
+          <div className={`${style["media-icons-wrapper"]}`}>
+            <a
+              href="https://www.linkedin.com/in/rishivanth-r-221088230/"
+              target="_blank"
+            >
+              <img src={LinkedIn} alt="LinkedIn" />
+            </a>
+            <a href="mailto:iamrishivanth.r@gmail.com">
+              <img src={MailIcon} alt="mail" />
+            </a>
+          </div>
         </div>
-        </div>
-
       </section>
     </>
   );
