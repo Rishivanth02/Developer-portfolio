@@ -6,8 +6,8 @@ import Header from "./components/header/Header";
 function App() {
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/path-to-your-cv.pdf";
-    link.download = "My_CV.pdf";
+    link.href = "/my-cv.pdf";
+    link.download = "my-cv.pdf";
     link.click();
   };
   return (
@@ -16,12 +16,19 @@ function App() {
         <Header />
         <MainContent />
         <div className="download-cv-wrapper">
-          <button className="download-cv download-cv-wrapper" onClick={downloadCV}>
-            Download CV
-          <span className="download-icon">
+          <a 
+          href="/my-cv.pdf" 
+          target="_blank"
+          
+      
+          className="download-cv download-cv-wrapper" 
+          // onClick={downloadCV}
+          >
+            View CV
+          {/* <span className="download-icon">
              <img src={downloadIcon} alt="home-icon" />
-          </span>
-          </button>
+          </span> */}
+          </a>
         </div>
       </div>
     </>
